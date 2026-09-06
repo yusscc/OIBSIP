@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sebastian Vettel - Tribute Page</title>
+    <link rel="stylesheet" href="style.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Teko:wght@400;500;600;700&family=Inter:wght@300;400;600&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <nav class="f1-nav">
+        <div class="logo">F1</div>
+        <ul class="nav-links">
+            <li>RACE SERIES <span class="arrow">▼</span></li>
+            <li>SCHEDULE <span class="arrow">▼</span></li>
+            <li>RESULTS <span class="arrow">▼</span></li>
+            <li class="active">NEWS <span class="arrow">▼</span></li>
+            <li>DRIVERS <span class="arrow">▼</span></li>
+            <li>TEAMS <span class="arrow">▼</span></li>
+            <li>FANTASY & GAMING <span class="arrow">▼</span></li>
+        </ul>
+        <div class="nav-right">
+            <span>F1 TV</span>
+            <button class="login-btn">LOG IN</button>
+            <button class="subscribe-btn">SUBSCRIBE</button>
+        </div>
+    </nav>
+
+    <header class="hero">
+        <div class="hero-bg"></div>
+        <div class="hero-content">
+            <div class="driver-info">
+                <h1 class="driver-number">5</h1>
+                <h2 class="driver-name">SEBASTIAN<br>VETTEL</h2>
+                <p class="tagline">The Four-Time World Champion</p>
+                <div class="driver-meta">
+                    <span class="country">🇩🇪 Germany</span>
+                    <span class="team">Aston Martin / Ferrari</span>
+                </div>
+                <button class="shop-btn">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="8" cy="21" r="1" />
+                        <circle cx="19" cy="21" r="1" />
+                        <path d="M2.05 2.05h2l2.66 12.42a2 2 0 0 0 2 1.58h9.78a2 2 0 0 0 1.95-1.57l1.65-7.43H5.12" />
+                    </svg>
+                    Shop Now
+                </button>
+            </div>
+
+            <div class="hero-image-container">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/3/3b/Sebastian_Vettel_exults_for_pole_position_-_2010_Korean_Gran_Prix.jpeg?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=original"
+                    alt="Sebastian Vettel" class="hero-image">
+            </div>
+
+            <div class="stats-sidebar">
+                <div class="stats-header">
+                    <h3>STATISTICS</h3>
+                    <span class="arrow-icon">↗</span>
+                </div>
+
+                <div class="stats-tabs">
+                    <div class="tab active" data-target="career">CAREER<br>STATS</div>
+                    <div class="tab" data-target="season">2022<br>SEASON</div>
+                </div>
+
+                <div class="stats-grid" id="career-stats">
+                    <div class="stat-item"><span class="stat-label">GRAND PRIX ENTERED</span><span
+                            class="stat-value">299</span></div>
+                    <div class="stat-item"><span class="stat-label">CAREER POINTS</span><span
+                            class="stat-value">3098</span></div>
+                    <div class="stat-item"><span class="stat-label">HIGHEST RACE FINISH</span><span class="stat-value">1
+                            (X53)</span></div>
+                    <div class="stat-item"><span class="stat-label">PODIUMS</span><span class="stat-value">122</span>
+                    </div>
+                    <div class="stat-item"><span class="stat-label">POLE POSITIONS</span><span
+                            class="stat-value">57</span></div>
+                    <div class="stat-item"><span class="stat-label">WORLD CHAMPIONSHIPS</span><span
+                            class="stat-value">4</span></div>
+                    <div class="stat-item"><span class="stat-label">DNFS</span><span class="stat-value">43</span></div>
+                </div>
+
+                <div class="stats-grid" id="season-stats" style="display: none;">
+                    <div class="stat-item"><span class="stat-label">RACES ENTERED</span><span
+                            class="stat-value">20</span></div>
+                    <div class="stat-item"><span class="stat-label">SEASON POINTS</span><span
+                            class="stat-value">37</span></div>
+                    <div class="stat-item"><span class="stat-label">HIGHEST RACE FINISH</span><span class="stat-value">6
+                            (X1)</span></div>
+                    <div class="stat-item"><span class="stat-label">PODIUMS</span><span class="stat-value">0</span>
+                    </div>
+                    <div class="stat-item"><span class="stat-label">POLE POSITIONS</span><span
+                            class="stat-value">0</span></div>
+                    <div class="stat-item"><span class="stat-label">WORLD CHAMPIONSHIPS</span><span
+                            class="stat-value">0</span></div>
+                    <div class="stat-item"><span class="stat-label">DNFS</span><span class="stat-value">2</span></div>
+                </div>
+
+                <button class="full-stats-btn">FULL SEASON RESULTS</button>
+            </div>
+        </div>
+    </header>
+
+    <main class="tribute-content">
+        <section class="biography">
+            <h2>The Boy From Heppenheim</h2>
+            <p>Sebastian Vettel's journey in Formula 1 is a story of relentless passion, historic records, and a
+                profound love for the sport. Debuting in 2007, Vettel quickly established himself as a prodigy. He
+                claimed his first pole position and race victory at the 2008 Italian Grand Prix in a Toro Rosso,
+                becoming the youngest driver to do so at the time. This breathtaking performance in torrential rain
+                signaled the arrival of a future legend.</p>
+            <p>Moving to Red Bull Racing in 2009, Vettel partnered with the genius of Adrian Newey to dominate the early
+                2010s. Between 2010 and 2013, he achieved a staggering four consecutive World Drivers' Championships.
+                His 2013 season remains one of the most dominant in the sport's history, marked by nine consecutive race
+                victories—a record that stood untouched for nearly a decade.</p>
+            <p>Later in his career, Vettel made the emotional move to Scuderia Ferrari, aiming to emulate his childhood
+                hero, Michael Schumacher. While the championship in red proved elusive, Vettel became one of Ferrari's
+                most successful and beloved drivers, securing 14 victories for the team. In his final years with Aston
+                Martin, Vettel transitioned into a respected elder statesman of the grid, passionately advocating for
+                environmental issues and human rights.</p>
+        </section>
+
+        <section class="quote-block">
+            <blockquote>
+                "Everybody is a Ferrari fan. Even if they say they're not, they are Ferrari fans."
+                <cite>— Sebastian Vettel</cite>
+            </blockquote>
+        </section>
+
+        <section class="timeline">
+            <h2>World Championships</h2>
+            <div class="cards-container">
+                <div class="card">
+                    <div class="card-year">2010</div>
+                    <h3>The Youngest Champion</h3>
+                    <p>Overcame a 15-point deficit in the final race at Abu Dhabi to clinch his maiden title.</p>
+                </div>
+                <div class="card">
+                    <div class="card-year">2011</div>
+                    <h3>Absolute Dominance</h3>
+                    <p>Secured 11 wins and 15 pole positions, comfortably defending his championship.</p>
+                </div>
+                <div class="card">
+                    <div class="card-year">2012</div>
+                    <h3>The Comeback Kid</h3>
+                    <p>Fought back from a first-lap spin in Brazil to secure a historic third title against Fernando
+                        Alonso.</p>
+                </div>
+                <div class="card">
+                    <div class="card-year">2013</div>
+                    <h3>Unstoppable Force</h3>
+                    <p>Won the last nine consecutive races of the season, cementing his status as a four-time champion.
+                    </p>
+                </div>
+            </div>
+        </section>
+    </main>
+    <script src="script.js"></script>
+</body>
+
+</html>
