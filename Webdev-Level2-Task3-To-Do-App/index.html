@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Ledger — Daily Task Tracker</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,500&family=Work+Sans:wght@400;500;600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="page">
+
+        <header class="masthead">
+            <p class="masthead__eyebrow" id="todayDate">—</p>
+            <h1 class="masthead__title">The Ledger</h1>
+            <p class="masthead__sub">Keep a running account of what's open and what's settled.</p>
+        </header>
+
+        <form class="entry-row" id="entryForm" autocomplete="off">
+            <input type="text" id="taskInput" class="entry-row__input" placeholder="What needs doing today?"
+                maxlength="140" required>
+            <button type="submit" class="entry-row__submit">Add entry</button>
+        </form>
+
+        <main class="ledger">
+
+            <section class="ledger-section" aria-labelledby="openHeading">
+                <div class="ledger-section__head">
+                    <h2 id="openHeading" class="ledger-section__title">Open</h2>
+                    <span class="ledger-section__count" id="pendingCount">0 pending</span>
+                </div>
+                <ul class="task-list" id="pendingList"></ul>
+                <p class="empty-state" id="pendingEmpty">Nothing on the books yet. Add your first task above.</p>
+            </section>
+
+            <section class="ledger-section" aria-labelledby="settledHeading">
+                <div class="ledger-section__head">
+                    <h2 id="settledHeading" class="ledger-section__title">Settled</h2>
+                    <span class="ledger-section__count" id="completedCount">0 completed</span>
+                </div>
+                <ul class="task-list task-list--settled" id="completedList"></ul>
+                <p class="empty-state" id="completedEmpty">No entries settled yet — mark a task done to see it here.</p>
+            </section>
+
+        </main>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

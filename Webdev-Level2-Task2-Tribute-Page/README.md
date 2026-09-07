@@ -48,7 +48,7 @@ tribute-page/
 
 1. Clone this repository:
    ```bash
-   git clone <your-repository-link>
+   git clone <https://github.com/yusscc/OIBSIP.git>
    ```
 2. Open the project in an IDE such as VS Code.
 3. Open the `index.html` file in any modern web browser.

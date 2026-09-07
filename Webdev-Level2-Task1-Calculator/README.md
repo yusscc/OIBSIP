@@ -50,12 +50,9 @@ calculator/
 
 1. Clone this repository or download the files:
    ```bash
-   git clone <your-repository-link>
+   git clone <https://github.com/yusscc/OIBSIP.git>
    ```
-2. Navigate to the project directory:
-   ```bash
-   cd calculator
-   ```
+2. Open the project in an IDE such as VS Code.
 3. Open `index.html` in your favorite web browser. No server setup is required!
 
 🖥️ **Example Operations**
