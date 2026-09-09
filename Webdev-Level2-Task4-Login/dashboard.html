@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dashboard | Vela</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap"
+        rel="stylesheet" />
+</head>
+
+<body class="dashboard-body">
+    <div class="dashboard-wrapper">
+        <div class="dashboard-card">
+            <div class="brand">
+                <span class="brand-mark">V</span>
+                <span class="brand-name">Vela</span>
+            </div>
+
+            <p class="dash-eyebrow" id="welcomeMessage">Welcome back</p>
+            <h1 class="form-title">You're signed in</h1>
+            <p class="form-subtitle">This page is only reachable with an active session. Refresh, close the tab, or come
+                back later — you'll stay signed in until you log out.</p>
+
+            <button id="logoutBtn" class="btn-primary btn-danger">Log out</button>
+        </div>
+    </div>
+
+    <script src="auth.js"></script>
+    <script>
+        requireAuth();
+
+        const session = getSession();
+        if (session) {
+            document.getElementById('welcomeMessage').textContent = `Welcome back, ${session.username}`;
+        }
+
+        document.getElementById('logoutBtn').addEventListener('click', () => {
+            clearSession();
+            window.location.href = 'index.html';
+        });
+    </script>
+</body>
+
+</html>

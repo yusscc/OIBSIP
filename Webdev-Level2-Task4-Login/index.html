@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sign in | Vela</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap"
+        rel="stylesheet" />
+</head>
+
+<body>
+    <div class="page">
+
+        <div class="left-panel">
+            <div class="brand">
+                <span class="brand-mark">V</span>
+                <span class="brand-name">Vela</span>
+            </div>
+
+            <div class="form-stage">
+
+                <div id="loginSlide" class="form-slide active">
+                    <h1 class="form-title">Sign in</h1>
+                    <p class="form-subtitle">Enter your details to access your account</p>
+
+                    <form id="loginForm" novalidate>
+                        <div class="field">
+                            <label for="loginId">Email address</label>
+                            <div class="input-wrap">
+                                <svg class="field-icon" viewBox="0 0 24 24">
+                                    <path
+                                        d="M3 6.5C3 5.67 3.67 5 4.5 5h15c.83 0 1.5.67 1.5 1.5v11c0 .83-.67 1.5-1.5 1.5h-15A1.5 1.5 0 0 1 3 17.5v-11Z"
+                                        fill="none" stroke="currentColor" stroke-width="1.5" />
+                                    <path d="M4 6.5 12 13l8-6.5" fill="none" stroke="currentColor" stroke-width="1.5"
+                                        stroke-linecap="round" stroke-linejoin="round" />
+                                </svg>
+                                <input type="text" id="loginId" placeholder="you@example.com" autocomplete="username"
+                                    required />
+                            </div>
+                        </div>
+
+                        <div class="field">
+                            <label for="loginPassword">Password</label>
+                            <div class="input-wrap">
+                                <svg class="field-icon" viewBox="0 0 24 24">
+                                    <rect x="5" y="10.5" width="14" height="9" rx="2" fill="none" stroke="currentColor"
+                                        stroke-width="1.5" />
+                                    <path d="M8 10.5V8a4 4 0 0 1 8 0v2.5" fill="none" stroke="currentColor"
+                                        stroke-width="1.5" stroke-linecap="round" />
+                                </svg>
+                                <input type="password" id="loginPassword" placeholder="••••••••"
+                                    autocomplete="current-password" required />
+                                <button type="button" class="toggle-password" data-target="loginPassword"
+                                    aria-label="Show password">
+                                    <svg class="eye-open" viewBox="0 0 24 24">
+                                        <path d="M2 12s3.6-7 10-7 10 7 10 7-3.6 7-10 7-10-7-10-7Z" fill="none"
+                                            stroke="currentColor" stroke-width="1.5" stroke-linejoin="round" />
+                                        <circle cx="12" cy="12" r="3" fill="none" stroke="currentColor"
+                                            stroke-width="1.5" />
+                                    </svg>
+                                    <svg class="eye-closed" viewBox="0 0 24 24">
+                                        <path d="M3 3l18 18" stroke="currentColor" stroke-width="1.5"
+                                            stroke-linecap="round" />
+                                        <path
+                                            d="M10.6 5.2C11 5.1 11.5 5 12 5c6.4 0 10 7 10 7a17.7 17.7 0 0 1-3.2 4.1M6.5 6.8C4 8.4 2 12 2 12s3.6 7 10 7c1.4 0 2.6-.3 3.7-.8"
+                                            fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                                            stroke-linejoin="round" />
+                                        <path d="M9.9 9.9a3 3 0 0 0 4.2 4.2" fill="none" stroke="currentColor"
+                                            stroke-width="1.5" stroke-linecap="round" />
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class="field-row">
+                            <label class="checkbox">
+                                <input type="checkbox" id="rememberMe" />
+                                <span>Remember me</span>
+                            </label>
+                            <span class="link-muted">Forgot password?</span>
+                        </div>
+
+                        <div id="loginError" class="form-message error"></div>
+
+                        <button type="submit" class="btn-primary">Sign in</button>
+                    </form>
+
+                    <p class="switch-line">Don't have an account? <a href="#" id="toRegister">Sign up</a></p>
+
+                    <div class="divider"><span>or continue with</span></div>
+
+                    <div class="social-row" aria-hidden="true">
+                        <div class="social-icon" title="Google">
+                            <svg viewBox="0 0 24 24">
+                                <path fill="#EA4335"
+                                    d="M12 10.2v3.9h5.5c-.24 1.3-1.65 3.8-5.5 3.8-3.3 0-6-2.73-6-6.1s2.7-6.1 6-6.1c1.88 0 3.14.8 3.86 1.49l2.63-2.53C16.87 3.02 14.68 2 12 2 6.98 2 2.9 6.05 2.9 11s4.08 9 9.1 9c5.25 0 8.74-3.69 8.74-8.89 0-.6-.07-1.05-.15-1.5H12Z" />
+                            </svg>
+                        </div>
+                        <div class="social-icon" title="GitHub">
+                            <svg viewBox="0 0 24 24">
+                                <path fill="currentColor"
+                                    d="M12 2a10 10 0 0 0-3.16 19.49c.5.09.68-.22.68-.48v-1.7c-2.78.6-3.37-1.34-3.37-1.34-.46-1.16-1.11-1.47-1.11-1.47-.9-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.9 1.52 2.34 1.08 2.91.83.09-.65.35-1.08.63-1.33-2.22-.25-4.56-1.11-4.56-4.94 0-1.09.39-1.98 1.03-2.68-.1-.25-.45-1.27.1-2.65 0 0 .84-.27 2.75 1.02a9.6 9.6 0 0 1 5 0c1.91-1.29 2.75-1.02 2.75-1.02.55 1.38.2 2.4.1 2.65.64.7 1.03 1.59 1.03 2.68 0 3.84-2.34 4.68-4.57 4.93.36.31.68.92.68 1.85v2.74c0 .26.18.58.69.48A10 10 0 0 0 12 2Z" />
+                            </svg>
+                        </div>
+                        <div class="social-icon" title="Facebook">
+                            <svg viewBox="0 0 24 24">
+                                <path fill="#1877F2"
+                                    d="M22 12a10 10 0 1 0-11.56 9.88v-6.99H7.9V12h2.54V9.8c0-2.5 1.49-3.89 3.78-3.89 1.1 0 2.24.2 2.24.2v2.46h-1.26c-1.24 0-1.63.77-1.63 1.56V12h2.78l-.45 2.89h-2.33v6.99A10 10 0 0 0 22 12Z" />
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="registerSlide" class="form-slide">
+                    <h1 class="form-title">Create account</h1>
+                    <p class="form-subtitle">Start your journey with us today</p>
+
+                    <form id="registerForm" novalidate>
+                        <div class="field">
+                            <label for="regUsername">Username</label>
+                            <div class="input-wrap">
+                                <svg class="field-icon" viewBox="0 0 24 24">
+                                    <circle cx="12" cy="8" r="3.2" fill="none" stroke="currentColor"
+                                        stroke-width="1.5" />
+                                    <path d="M5 19.5c1.2-3.3 3.8-5 7-5s5.8 1.7 7 5" fill="none" stroke="currentColor"
+                                        stroke-width="1.5" stroke-linecap="round" />
+                                </svg>
+                                <input type="text" id="regUsername" placeholder="Choose a username"
+                                    autocomplete="username" required />
+                            </div>
+                        </div>
+
+                        <div class="field">
+                            <label for="regEmail">Email address</label>
+                            <div class="input-wrap">
+                                <svg class="field-icon" viewBox="0 0 24 24">
+                                    <path
+                                        d="M3 6.5C3 5.67 3.67 5 4.5 5h15c.83 0 1.5.67 1.5 1.5v11c0 .83-.67 1.5-1.5 1.5h-15A1.5 1.5 0 0 1 3 17.5v-11Z"
+                                        fill="none" stroke="currentColor" stroke-width="1.5" />
+                                    <path d="M4 6.5 12 13l8-6.5" fill="none" stroke="currentColor" stroke-width="1.5"
+                                        stroke-linecap="round" stroke-linejoin="round" />
+                                </svg>
+                                <input type="email" id="regEmail" placeholder="you@example.com" autocomplete="email"
+                                    required />
+                            </div>
+                        </div>
+
+                        <div class="field">
+                            <label for="regPassword">Password</label>
+                            <div class="input-wrap">
+                                <svg class="field-icon" viewBox="0 0 24 24">
+                                    <rect x="5" y="10.5" width="14" height="9" rx="2" fill="none" stroke="currentColor"
+                                        stroke-width="1.5" />
+                                    <path d="M8 10.5V8a4 4 0 0 1 8 0v2.5" fill="none" stroke="currentColor"
+                                        stroke-width="1.5" stroke-linecap="round" />
+                                </svg>
+                                <input type="password" id="regPassword" placeholder="8+ characters, 1 number"
+                                    autocomplete="new-password" required />
+                                <button type="button" class="toggle-password" data-target="regPassword"
+                                    aria-label="Show password">
+                                    <svg class="eye-open" viewBox="0 0 24 24">
+                                        <path d="M2 12s3.6-7 10-7 10 7 10 7-3.6 7-10 7-10-7-10-7Z" fill="none"
+                                            stroke="currentColor" stroke-width="1.5" stroke-linejoin="round" />
+                                        <circle cx="12" cy="12" r="3" fill="none" stroke="currentColor"
+                                            stroke-width="1.5" />
+                                    </svg>
+                                    <svg class="eye-closed" viewBox="0 0 24 24">
+                                        <path d="M3 3l18 18" stroke="currentColor" stroke-width="1.5"
+                                            stroke-linecap="round" />
+                                        <path
+                                            d="M10.6 5.2C11 5.1 11.5 5 12 5c6.4 0 10 7 10 7a17.7 17.7 0 0 1-3.2 4.1M6.5 6.8C4 8.4 2 12 2 12s3.6 7 10 7c1.4 0 2.6-.3 3.7-.8"
+                                            fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                                            stroke-linejoin="round" />
+                                        <path d="M9.9 9.9a3 3 0 0 0 4.2 4.2" fill="none" stroke="currentColor"
+                                            stroke-width="1.5" stroke-linecap="round" />
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+
+                        <div id="registerError" class="form-message error"></div>
+                        <div id="registerSuccess" class="form-message success"></div>
+
+                        <button type="submit" class="btn-primary">Create account</button>
+                    </form>
+
+                    <p class="switch-line">Already have an account? <a href="#" id="toLogin">Sign in</a></p>
+
+                    <div class="divider"><span>or continue with</span></div>
+
+                    <div class="social-row" aria-hidden="true">
+                        <div class="social-icon" title="Google">
+                            <svg viewBox="0 0 24 24">
+                                <path fill="#EA4335"
+                                    d="M12 10.2v3.9h5.5c-.24 1.3-1.65 3.8-5.5 3.8-3.3 0-6-2.73-6-6.1s2.7-6.1 6-6.1c1.88 0 3.14.8 3.86 1.49l2.63-2.53C16.87 3.02 14.68 2 12 2 6.98 2 2.9 6.05 2.9 11s4.08 9 9.1 9c5.25 0 8.74-3.69 8.74-8.89 0-.6-.07-1.05-.15-1.5H12Z" />
+                            </svg>
+                        </div>
+                        <div class="social-icon" title="GitHub">
+                            <svg viewBox="0 0 24 24">
+                                <path fill="currentColor"
+                                    d="M12 2a10 10 0 0 0-3.16 19.49c.5.09.68-.22.68-.48v-1.7c-2.78.6-3.37-1.34-3.37-1.34-.46-1.16-1.11-1.47-1.11-1.47-.9-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.9 1.52 2.34 1.08 2.91.83.09-.65.35-1.08.63-1.33-2.22-.25-4.56-1.11-4.56-4.94 0-1.09.39-1.98 1.03-2.68-.1-.25-.45-1.27.1-2.65 0 0 .84-.27 2.75 1.02a9.6 9.6 0 0 1 5 0c1.91-1.29 2.75-1.02 2.75-1.02.55 1.38.2 2.4.1 2.65.64.7 1.03 1.59 1.03 2.68 0 3.84-2.34 4.68-4.57 4.93.36.31.68.92.68 1.85v2.74c0 .26.18.58.69.48A10 10 0 0 0 12 2Z" />
+                            </svg>
+                        </div>
+                        <div class="social-icon" title="Facebook">
+                            <svg viewBox="0 0 24 24">
+                                <path fill="#1877F2"
+                                    d="M22 12a10 10 0 1 0-11.56 9.88v-6.99H7.9V12h2.54V9.8c0-2.5 1.49-3.89 3.78-3.89 1.1 0 2.24.2 2.24.2v2.46h-1.26c-1.24 0-1.63.77-1.63 1.56V12h2.78l-.45 2.89h-2.33v6.99A10 10 0 0 0 22 12Z" />
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="right-panel">
+            <img class="hero-img"
+                src="https://upload.wikimedia.org/wikipedia/commons/3/3b/Sebastian_Vettel_exults_for_pole_position_-_2010_Korean_Gran_Prix.jpeg"
+                alt="" />
+            <div class="hero-overlay"></div>
+
+            <div class="right-content">
+                <div class="right-logo">
+                    <span class="brand-mark light">V</span>
+                    <span class="brand-name light">Vela</span>
+                </div>
+
+                <div class="right-copy">
+                    <h2>Built for people who move fast.</h2>
+                    <p>Vela keeps your account secure while getting out of your way — sign in once and get straight to
+                        work.</p>
+                    <span class="stat-line">Trusted by 17k+ people already signed in</span>
+                </div>
+
+                <div class="info-card">
+                    <h3>Your session, protected</h3>
+                    <p>Every password is hashed before it's stored, and your dashboard stays locked until you sign in.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="auth.js"></script>
+    <script>
+        const loginSlide = document.getElementById('loginSlide');
+        const registerSlide = document.getElementById('registerSlide');
+
+        function showView(view) {
+            if (view === 'register') {
+                loginSlide.classList.remove('active');
+                loginSlide.classList.add('exit-left');
+                registerSlide.classList.remove('exit-left');
+                registerSlide.classList.add('active');
+            } else {
+                registerSlide.classList.remove('active');
+                registerSlide.classList.add('exit-left');
+                loginSlide.classList.remove('exit-left');
+                loginSlide.classList.add('active');
+            }
+        }
+
+        document.getElementById('toRegister').addEventListener('click', (e) => {
+            e.preventDefault();
+            showView('register');
+        });
+
+        document.getElementById('toLogin').addEventListener('click', (e) => {
+            e.preventDefault();
+            showView('login');
+        });
+
+        const params = new URLSearchParams(window.location.search);
+        if (params.get('view') === 'register') {
+            showView('register');
+        }
+
+        document.querySelectorAll('.toggle-password').forEach((btn) => {
+            btn.addEventListener('click', () => {
+                const target = document.getElementById(btn.dataset.target);
+                const isHidden = target.type === 'password';
+                target.type = isHidden ? 'text' : 'password';
+                btn.classList.toggle('is-visible', isHidden);
+                btn.setAttribute('aria-label', isHidden ? 'Hide password' : 'Show password');
+            });
+        });
+
+        const loginForm = document.getElementById('loginForm');
+        const loginError = document.getElementById('loginError');
+
+        loginForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            loginError.textContent = '';
+
+            const identifier = document.getElementById('loginId').value.trim();
+            const password = document.getElementById('loginPassword').value;
+
+            console.log('[LOGIN] identifier:', identifier);
+            console.log('[LOGIN] password length:', password.length);
+
+            if (!identifier || !password) {
+                loginError.textContent = 'Please fill in all fields.';
+                console.log('[LOGIN] empty fields, stopping');
+                return;
+            }
+
+            const user = findUserByIdentifier(identifier);
+            const hashedInput = hashPassword(password);
+
+            console.log('[LOGIN] user found:', user);
+            console.log('[LOGIN] hashedInput:', hashedInput);
+            console.log('[LOGIN] stored hash:', user ? user.passwordHash : 'N/A');
+            console.log('[LOGIN] all users in storage:', JSON.parse(localStorage.getItem('users')));
+
+            if (!user || user.passwordHash !== hashedInput) {
+                loginError.textContent = 'Invalid username/email or password.';
+                console.log('[LOGIN] hash mismatch or user not found, stopping');
+                return;
+            }
+
+            console.log('[LOGIN] success! redirecting to dashboard.html');
+            setSession(user.username);
+            window.location.replace('dashboard.html');
+        });
+
+        const registerForm = document.getElementById('registerForm');
+        const registerError = document.getElementById('registerError');
+        const registerSuccess = document.getElementById('registerSuccess');
+
+        registerForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            registerError.textContent = '';
+            registerSuccess.textContent = '';
+
+            const username = document.getElementById('regUsername').value.trim();
+            const email = document.getElementById('regEmail').value.trim();
+            const password = document.getElementById('regPassword').value;
+
+            if (!username || !email || !password) {
+                registerError.textContent = 'Please fill in all fields.';
+                return;
+            }
+
+            if (!isValidPassword(password)) {
+                registerError.textContent = 'Password must be at least 8 characters and include at least 1 number.';
+                return;
+            }
+
+            const users = getUsers();
+            const exists = users.some(
+                (u) =>
+                    u.username.toLowerCase() === username.toLowerCase() ||
+                    u.email.toLowerCase() === email.toLowerCase()
+            );
+
+            if (exists) {
+                registerError.textContent = 'Username or email already exists.';
+                return;
+            }
+
+            const passwordHash = hashPassword(password);
+            users.push({ username, email, passwordHash });
+            saveUsers(users);
+
+            setSession(username);
+            registerSuccess.textContent = 'Account created! Redirecting...';
+            setTimeout(() => {
+                window.location.replace('dashboard.html');
+            }, 900);
+        });
+    </script>
+</body>
+
+</html>
